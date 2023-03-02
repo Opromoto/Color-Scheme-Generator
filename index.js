@@ -20,8 +20,8 @@ document.addEventListener("click", e => {
     }
 })
 
-formEl.addEventListener("submit", (e) => {
-    e.preventDefault()
+
+const genColor = () => {
     
     let color = colorPicker.value.slice(1,7)
     fetch(`https://www.thecolorapi.com/scheme/?hex=${color}&count=5&format=json&mode=${selectEl.value}`)
@@ -47,7 +47,7 @@ formEl.addEventListener("submit", (e) => {
         })
 
         return false  
-})
+}
 
   function copyToClipboard(text) {
     window.prompt("Copy to clipboard: Ctrl+C, Enter", text);
