@@ -44,7 +44,9 @@ formEl.addEventListener("submit", (e) => {
                 <p class="hex-value">${data.colors[3].hex.value}</p>
                 <p class="hex-value">${data.colors[4].hex.value}</p>
             </div>`
-        })  
+        })
+
+        return false  
 })
 
   function copyToClipboard(text) {
